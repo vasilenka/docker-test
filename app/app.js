@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
+const User = require('./user');
+
 mongoose.set('useFindAndModify', false);
 mongoose
   .connect(
@@ -23,6 +25,25 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/', (req, res, next) => {
   res.status(200).json({
     hello: 'world! 🌎'
+  })
+})
+
+app.post('/', (req, res, next) => {
+  let user = new User({
+    name: req.body.name,
+    email: req.body.email,
+  })
+
+  user.save().then(user => {
+    res.status(201).json({
+      message: 'User created!',
+      user: user
+    })
+  }).catch(err => {
+    res.status(500).json({
+      message: 'Oopss! 😮',
+      error: err
+    })
   })
 })
 
