@@ -1,0 +1,43 @@
+Arguments: 
+  /usr/local/Cellar/node/10.9.0/bin/node /Users/herlambang/.yarn/bin/yarn.js add express bodyParser mongoose morgan lodash
+
+PATH: 
+  /Users/herlambang/.yarn/bin:/Users/herlambang/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/sqlite/bin:/Users/herlambang/bin:/usr/local/bin:/usr/local/opt/llvm/bin:/Users/herlambang/Code/phantomjs-2.1.1-macosx/bin:/Users/herlambang/.composer/vendor/bin:/usr/local/sbin:/Users/herlambang/Code/Go/bin:/Users/herlambang/Code/flutter/bin:/Users/herlambang/android/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  10.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/bodyParser: Not found
+      at Request.params.callback [as _callback] (/Users/herlambang/.yarn/lib/cli.js:65894:18)
+      at Request.self.callback (/Users/herlambang/.yarn/lib/cli.js:129018:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/Users/herlambang/.yarn/lib/cli.js:129990:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/Users/herlambang/.yarn/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1085:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "docker-test",
+    "version": "1.0.0",
+    "description": "test docker container",
+    "main": "index.js",
+    "author": "vasilenka",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
