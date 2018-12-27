@@ -8,7 +8,7 @@ const User = require('./user');
 mongoose.set('useFindAndModify', false);
 mongoose
   .connect(
-    'mongodb://mongo:27017/docker-test',
+    `mongodb://${process.env.MONGO_HOST || '127.0.0.1'}:27017/docker-test`,
     {
       useNewUrlParser: true
     }
@@ -23,9 +23,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', (req, res, next) => {
-  res.status(200).json({
-    hello: 'world! 🌎'
-  })
+  User.find()
+    .then(users => {
+      res.status(200).json({
+        hello: 'world! 🌎',
+        users: users,
+      })
+    })
+    .catch(err => {
+      res.status(404).json({
+        hello: 'world! 🌎',
+        error: err,
+      })
+    })
 })
 
 app.post('/', (req, res, next) => {
