@@ -1,17 +1,16 @@
 {
   "name": "docker-test",
   "version": "1.0.0",
-  "description": "test docker container",
+  "description": "",
   "main": "app.js",
-  "author": "vasilenka",
-  "license": "MIT",
   "scripts": {
     "start": "node app.js"
   },
+  "author": "ongki vasilenka herlamabng",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "lodash": "^4.17.11",
     "mongoose": "^5.4.1",
     "morgan": "^1.9.1"
   },
