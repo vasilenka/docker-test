@@ -7,12 +7,13 @@ services:
     ports:
       - '8000:3000'
     links:
-      - mongo
+      - mongodb
     environment:
-      - MONGO_HOST: mongodb
-      - PORT: '3000'
-  mongo:
-    container_name: mongo
+      MONGO_HOST: mongodb
+      PORT: 3000
+
+  mongodb:
+    container_name: mongo-test
     image: mongo
     ports:
       - '27017:27017'
